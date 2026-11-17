@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Особливий день | Аня</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink:#e7c1c2;
+  --rose:#b77d83;
+  --green:#65795e;
+  --sage:#b5c0a9;
+  --cream:#fbf7ef;
+  --dark:#394637;
+  --light:#f2eae0;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--dark);
+  font-family:Montserrat,sans-serif;
+  font-weight:300;
+}
+.hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px 25px;
+  background:
+    radial-gradient(ellipse at 5% 10%,#efd7d6,transparent 45%),
+    radial-gradient(ellipse at 95% 90%,#dce5d4,transparent 45%),
+    var(--cream);
+}
+.invitation {
+  max-width:680px;
+  width:100%;
+  text-align:center;
+  padding:55px 35px;
+  border:1px solid var(--sage);
+  outline:1px solid var(--sage);
+  outline-offset:8px;
+  animation:appear 1.5s ease both;
+}
+@keyframes appear {
+  from { opacity:0; transform:translateY(25px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.eyebrow {
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--green);
+}
+h1 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(48px,10vw,79px);
+  line-height:.92;
+  font-weight:400;
+  margin:25px 0;
+}
+h1 span { color:var(--rose); font-style:italic; }
+.subtitle {
+  font-family:'Cormorant Garamond',serif;
+  font-size:25px;
+  font-style:italic;
+  color:var(--green);
+}
+.botanical {
+  width:min(100%,330px);
+  height:180px;
+  margin:10px auto;
+  overflow:visible;
+}
+.botanical path {
+  fill:none;
+  stroke:var(--green);
+  stroke-width:1.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.botanical .flower-line { stroke:var(--rose); }
+.botanical .leaf {
+  fill:#aebc9e;
+  fill-opacity:.48;
+  stroke:var(--green);
+}
+.botanical .petal {
+  fill:#e8c1c1;
+  fill-opacity:.48;
+  stroke:var(--rose);
+}
+.botanical .center { fill:#b98a62; stroke:#b98a62; }
+.intro {
+  max-width:440px;
+  margin:25px auto;
+  line-height:2;
+  font-size:12px;
+}
+.date {
+  font-family:'Cormorant Garamond',serif;
+  color:var(--rose);
+  font-size:44px;
+  margin-top:30px;
+}
+.date-details {
+  font-size:10px;
+  letter-spacing:3px;
+  line-height:2.3;
+  text-transform:uppercase;
+}
+.divider {
+  width:75px;
+  height:1px;
+  background:var(--sage);
+  margin:30px auto;
+}
+section.content {
+  padding:80px 25px;
+  text-align:center;
+}
+.alt { background:var(--light); }
+.section-title {
+  font-family:'Cormorant Garamond',serif;
+  font-weight:400;
+  font-size:48px;
+  color:var(--green);
+  margin:0 0 10px;
+}
+.section-subtitle {
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:20px;
+  color:var(--rose);
+  margin-bottom:35px;
+}
+.countdown {
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  margin:35px auto;
+}
+.countdown div { min-width:55px; }
+.countdown strong {
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:42px;
+  font-weight:400;
+  color:var(--rose);
+}
+.countdown span {
+  font-size:9px;
+  letter-spacing:1px;
+  color:var(--green);
+  text-transform:uppercase;
+}
+.details-card {
+  max-width:480px;
+  margin:30px auto;
+  padding:35px 20px;
+  border-top:1px solid var(--sage);
+  border-bottom:1px solid var(--sage);
+  line-height:2;
+  font-size:12px;
+}
+.details-card strong {
+  color:var(--rose);
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:500;
+}
+.map-button,.action-button {
+  display:inline-block;
+  margin-top:22px;
+  padding:15px 30px;
+  background:var(--green);
+  color:white;
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:0;
+  cursor:pointer;
+  font-family:Montserrat,sans-serif;
+  transition:.3s;
+}
+.map-button:hover,.action-button:hover { background:var(--rose); }
+.palette {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:30px auto;
+}
+.swatch {
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid white;
+  box-shadow:0 2px 8px #00000012;
+}
+.palette-caption {
+  font-size:10px;
+  letter-spacing:2px;
+  color:var(--green);
+}
+.note {
+  background:#e6ebdf;
+  padding:75px 25px;
+  text-align:center;
+}
+.note p {
+  max-width:440px;
+  margin:25px auto;
+  font-size:12px;
+  line-height:2;
+}
+.form-wrapper {
+  max-width:600px;
+  margin:35px auto 0;
+  padding:12px;
+  background:rgba(255,255,255,.45);
+  border:1px solid var(--sage);
+}
+.form-wrapper iframe {
+  display:block;
+  width:100%;
+  min-height:650px;
+  border:0;
+  background:transparent;
+}
+.form-placeholder {
+  padding:35px 20px;
+  border:1px dashed var(--sage);
+  max-width:500px;
+  margin:25px auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  color:var(--green);
+}
+footer {
+  text-align:center;
+  padding:45px 20px;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:25px;
+  color:var(--green);
+}
+.footer-small {
+  font-family:Montserrat,sans-serif;
+  font-style:normal;
+  font-size:9px;
+  letter-spacing:3px;
+  margin-top:20px;
+}
+.reveal {
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .9s ease,transform .9s ease;
+}
+.reveal.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+@media(max-width:480px) {
+  .invitation { padding:45px 18px; }
+  section.content { padding:60px 18px; }
+  .countdown { gap:12px; }
+  .countdown strong { font-size:34px; }
+  .swatch { width:40px; height:40px; }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="invitation">
+
+<div class="eyebrow">Запрошення на особливу подію</div>
+
+<h1>День народження<br><span>&</span><br>Бейбі-шавер</h1>
+
+<div class="subtitle">Початок нового розділу...</div>
+
+<svg class="botanical" viewBox="0 0 330 180" xmlns="http://www.w3.org/2000/svg">
+<path d="M165 170 Q145 105 110 35"/>
+<path d="M165 170 Q190 110 225 45"/>
+<path d="M165 170 Q165 95 165 20"/>
+<path class="leaf" d="M145 115 Q105 65 95 85 Q110 115 145 115Z"/>
+<path class="leaf" d="M174 130 Q220 85 235 105 Q210 130 174 130Z"/>
+<path class="leaf" d="M154 80 Q120 45 112 58 Q125 83 154 80Z"/>
+<path class="leaf" d="M178 90 Q208 50 219 65 Q203 90 178 90Z"/>
+<path class="leaf" d="M165 55 Q130 20 145 12 Q167 24 165 55Z"/>
+<path class="flower-line" d="M110 35 Q88 18 95 8"/>
+<path class="flower-line" d="M225 45 Q248 25 255 13"/>
+
+<g transform="translate(95 8)">
+<ellipse class="petal" cy="-12" rx="6" ry="12"/>
+<ellipse class="petal" cx="12" cy="-3" rx="6" ry="12" transform="rotate(65 12 -3)"/>
+<ellipse class="petal" cx="8" cy="11" rx="6" ry="12" transform="rotate(130 8 11)"/>
+<ellipse class="petal" cx="-8" cy="11" rx="6" ry="12" transform="rotate(-130 -8 11)"/>
+<ellipse class="petal" cx="-12" cy="-3" rx="6" ry="12" transform="rotate(-65 -12 -3)"/>
+<circle class="center" r="4"/>
+</g>
+
+<g transform="translate(255 13)">
+<ellipse class="petal" cy="-12" rx="6" ry="12"/>
+<ellipse class="petal" cx="12" cy="-3" rx="6" ry="12" transform="rotate(65 12 -3)"/>
+<ellipse class="petal" cx="8" cy="11" rx="6" ry="12" transform="rotate(130 8 11)"/>
+<ellipse class="petal" cx="-8" cy="11" rx="6" ry="12" transform="rotate(-130 -8 11)"/>
+<ellipse class="petal" cx="-12" cy="-3" rx="6" ry="12" transform="rotate(-65 -12 -3)"/>
+<circle class="center" r="4"/>
+</g>
+
+<g transform="translate(165 20)">
+<ellipse class="petal" cy="-12" rx="6" ry="12"/>
+<ellipse class="petal" cx="12" cy="-3" rx="6" ry="12" transform="rotate(65 12 -3)"/>
+<ellipse class="petal" cx="8" cy="11" rx="6" ry="12" transform="rotate(130 8 11)"/>
+<ellipse class="petal" cx="-8" cy="11" rx="6" ry="12" transform="rotate(-130 -8 11)"/>
+<ellipse class="petal" cx="-12" cy="-3" rx="6" ry="12" transform="rotate(-65 -12 -3)"/>
+<circle class="center" r="4"/>
+</g>
+</svg>
+
+<p class="intro">
+Цього року мій день народження має особливий сенс. Адже зовсім скоро наше життя стане трішки більшим, а любов — ще сильнішою.
+<br><br>
+Запрошую тебе розділити зі мною цей день, наповнений теплом, ніжністю та очікуванням маленького дива.
+</p>
+
+<div class="date">1 грудня</div>
+<div class="date-details">Вівторок · 2026<br>Київ, Україна</div>
+
+<div class="divider"></div>
+<div class="eyebrow">З любов'ю, Аня</div>
+
+</div>
+</section>
+
+<section class="content reveal">
+<h2 class="section-title">До нашої зустрічі</h2>
+<div class="section-subtitle">Час починає зворотний відлік</div>
+
+<div class="countdown">
+<div><strong id="days">00</strong><span>Днів</span></div>
+<div><strong id="hours">00</strong><span>Годин</span></div>
+<div><strong id="minutes">00</strong><span>Хвилин</span></div>
+<div><strong id="seconds">00</strong><span>Секунд</span></div>
+</div>
+</section>
+
+<section class="content alt reveal">
+<h2 class="section-title">Деталі свята</h2>
+<div class="section-subtitle">День, який хочеться запам'ятати</div>
+
+<div class="details-card">
+<p><strong>ДАТА</strong><br>1 грудня 2026 року · Вівторок</p>
+<p><strong>ЧАС</strong><br>18:00</p>
+<p><strong>МІСЦЕ</strong><br>Тираспольська, 60<br>Київ, Україна</p>
+<a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Тираспольська+60+Київ" target="_blank" rel="noopener">Відкрити мапу ↗</a>
+</div>
+</section>
+
+<section class="content reveal">
+<h2 class="section-title">Дрескод</h2>
+<div class="section-subtitle">Трохи ніжності у вашому образі</div>
+
+<p style="font-size:12px;line-height:2;max-width:400px;margin:auto">
+Буду рада бачити вас у ніжних відтінках рожевого, зеленого та молочного. Жодних суворих правил — головне, щоб вам було комфортно.
+</p>
+
+<div class="palette">
+<div class="swatch" style="background:#e6bfc1"></div>
+<div class="swatch" style="background:#bd8588"></div>
+<div class="swatch" style="background:#aebc9e"></div>
+<div class="swatch" style="background:#687b60"></div>
+<div class="swatch" style="background:#f4eadd"></div>
+</div>
+
+<div class="palette-caption">РОЖЕВИЙ · ШАВЛІЄВИЙ · МОЛОЧНИЙ</div>
+</section>
+
+<section class="content reveal">
+<h2 class="section-title">Чи будете з нами?</h2>
+<div class="section-subtitle">Ваша присутність — найкращий подарунок</div>
+
+<p style="font-size:12px;line-height:2;max-width:400px;margin:auto">
+Будь ласка, підтвердіть свою присутність до <strong>27 листопада</strong>, щоб ми могли підготувати для вас цей день.
+</p>
+
+<div id="rsvpEmbed" class="form-wrapper">
+<div class="form-placeholder">Тут з'явиться форма підтвердження присутності ♡</div>
+</div>
+</section>
+
+<footer>
+З нетерпінням чекаю зустрічі
+
+<svg class="botanical" viewBox="0 0 330 180" xmlns="http://www.w3.org/2000/svg">
+<path d="M165 170 Q145 105 110 35"/>
+<path d="M165 170 Q190 110 225 45"/>
+<path class="leaf" d="M145 115 Q105 65 95 85 Q110 115 145 115Z"/>
+<path class="leaf" d="M174 130 Q220 85 235 105 Q210 130 174 130Z"/>
+<path class="leaf" d="M154 80 Q120 45 112 58 Q125 83 154 80Z"/>
+<path class="flower-line" d="M110 35 Q88 18 95 8"/>
+<path class="flower-line" d="M225 45 Q248 25 255 13"/>
+<circle cx="95" cy="8" r="5" fill="#b77d83"/>
+<circle cx="255" cy="13" r="5" fill="#b77d83"/>
+</svg>
+
+<div class="footer-small">З ЛЮБОВ'Ю · Аня · 2026</div>
+</footer>
+
+<script>
+const eventDate = new Date('2026-12-01T18:00:00+02:00').getTime();
+
+function updateCountdown() {
+  const distance = eventDate - Date.now();
+
+  if (distance <= 0) {
+    ['days','hours','minutes','seconds'].forEach(id => {
+      document.getElementById(id).textContent = '00';
+    });
+    return;
+  }
+
+  document.getElementById('days').textContent =
+    String(Math.floor(distance / 86400000)).padStart(2,'0');
+
+  document.getElementById('hours').textContent =
+    String(Math.floor(distance % 86400000 / 3600000)).padStart(2,'0');
+
+  document.getElementById('minutes').textContent =
+    String(Math.floor(distance % 3600000 / 60000)).padStart(2,'0');
+
+  document.getElementById('seconds').textContent =
+    String(Math.floor(distance % 60000 / 1000)).padStart(2,'0');
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.12});
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const RSVP_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSenAWt95MUU27FYXoiRP-0Ed2bhroPCVwCCzW7CBUVxVeCh2Q/viewform?embedded=true';
+
+function addGoogleForm(containerId, url, height) {
+  if (!url.startsWith('https://docs.google.com/forms/')) return;
+
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+
+  const iframe = document.createElement('iframe');
+  iframe.src = url;
+  iframe.title = 'Форма';
+  iframe.loading = 'lazy';
+  iframe.style.height = height + 'px';
+
+  container.appendChild(iframe);
+}
+
+addGoogleForm('rsvpEmbed', RSVP_FORM_URL, 650);
+</script>
+
+</body>
+</html>
